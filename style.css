@@ -1,4 +1,4 @@
-body{
+body {
     background-color: rgb(39, 196, 11);
     display: flex;
     height: 100vh;
@@ -9,39 +9,67 @@ body{
     padding: 0;
 }
 
-.container{
+.container {
     background-color: rgb(184, 91, 15);
     color: aliceblue;
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
     text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box;
 }
 
-
-.currency-container{
-    padding: 20px;
+.currency-container {
+    margin: 10px 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.currency-container select{
+.currency-container select {
     padding: 10px;
+    width: 48%;
+    margin-bottom: 10px;
 }
 
-.currency-container input{
+.currency-container input {
     border: 0;
     background: transparent;
     font-size: 25px;
     text-align: right;
     color: aliceblue;
+    width: 48%;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-.exchange-rate{
+.exchange-rate {
     font-size: 16px;
     font-weight: 600;
 }
 
 select:focus,
-input:focus{
+input:focus {
     outline: 0;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 480px) {
+    .currency-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .currency-container select,
+    .currency-container input {
+        width: 100%;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .exchange-rate {
+        font-size: 14px;
+    }
 }
